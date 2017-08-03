@@ -1,0 +1,33 @@
+{
+  "name": "electron-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for electron with electron-builder",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron ./app --enable-logging",
+    "clean": "rm -rf ./dist",
+    "dev": "NODE_ENV='development' npm run start",
+    "dist": "npm run clean && build -mwl",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "electron-builder": "^12.0.3"
+  },
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    },
+    "win": {
+      "iconUrl": "(windows-only) https link to icon"
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^2.8.2"
+  }
+}
